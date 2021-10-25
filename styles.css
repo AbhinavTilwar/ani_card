@@ -21,20 +21,36 @@ img {
   border : 2px solid grey;
   padding: 1px;
 }
-.outerbox {
-    width: 300px;
-    border: 1px solid rgb(235, 235, 235);
-    padding: 10px;
-    margin: 20px;
-    border-radius: 15px;
-    box-shadow: 8px 8px rgb(235,235,235)
-  }
-  .innerbox{
-    width: 278px;
-    border: 1px solid rgb(235, 235, 235);
-    padding: 10px;
-    margin: 0px;
-  }
+.card {
+  width: 300px;
+  border: 1px solid rgb(235, 235, 235);
+  padding: 10px;
+  margin: auto 0;
+  border-radius: 15px;
+  box-shadow: 8px 8px rgb(235,235,235);
+
+  transition:transform .3s;
+  cursor: pointer;
+  background:#fff;
+  display:inline-block;
+}
+.card:nth-of-type(even) {
+  transform:scale(.9) rotate(-5deg);
+}
+.card:nth-of-type(odd) {
+  transform:scale(.9) rotate(5deg);
+}
+
+.card:hover {
+  transform:scale(1) rotate(0deg);
+}
+
+.innerbox{
+  width: 278px;
+  border: 1px solid rgb(235, 235, 235);
+  padding: 10px;
+  margin: 0px;
+}
 .justify{
     text-align: justify;
 }
